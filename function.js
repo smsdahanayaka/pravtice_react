@@ -1,6 +1,21 @@
-const conbsoleName=(_data)=>{
-    console.log(`${_data.name} this is ,my name . and this is my aghe ${_data.age}`);
-}
+const createFunction = (_create) => {
+  if (_create === true) {
+    setTimeout(() => {
+      console.log("file created");
+    }, 1000);
+  }
+};
 
+const readFile = (_isRead) => {
+  if (_isRead === true) {
+    setTimeout(() => {
+      console.log("file is readed");
+    }, 1000);
+  }
+};
 
-conbsoleName({name:"shan",age:121});
+createFunction(true)
+  .then(() => {
+    readFile(false);
+  })
+  .then(() => {});
